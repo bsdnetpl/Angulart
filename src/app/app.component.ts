@@ -6,15 +6,19 @@ import { SumButtonComponent } from './sum-button/sum-button.component';
 import { PrimeNumbersComponent } from "./prime-numbers/prime-numbers.component";
 import { LoginComponent } from "./login/login.component";
 import { UserDetailsComponent } from "./user-detail/user-detail.component";
+import { RegisterComponent } from "./register/register.component";
+import { HttpClientModule } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, Input1Component,
     Input2Component,
-    SumButtonComponent, PrimeNumbersComponent, LoginComponent, UserDetailsComponent],
+    SumButtonComponent, PrimeNumbersComponent, 
+    HttpClientModule, LoginComponent, UserDetailsComponent, RegisterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'moja-aplikacja';
