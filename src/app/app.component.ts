@@ -8,6 +8,8 @@ import { LoginComponent } from "./login/login.component";
 import { UserDetailsComponent } from "./user-detail/user-detail.component";
 import { RegisterComponent } from "./register/register.component";
 import { HttpClientModule } from '@angular/common/http';
+import { ChangePasswordComponent } from "./change-password/change-password.component";
+import { DeleteUserComponent } from "./delete-user/delete-user.component";
 
 
 @Component({
@@ -15,8 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
   standalone: true,
   imports: [RouterOutlet, Input1Component,
     Input2Component,
-    SumButtonComponent, PrimeNumbersComponent, 
-    HttpClientModule, LoginComponent, UserDetailsComponent, RegisterComponent],
+    SumButtonComponent, PrimeNumbersComponent,
+    HttpClientModule, LoginComponent, UserDetailsComponent, RegisterComponent, ChangePasswordComponent, DeleteUserComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
