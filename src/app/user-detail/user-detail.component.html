@@ -1,0 +1,56 @@
+<div class="container mt-5">
+  <h2 class="mb-4">Szczegóły Użytkownika</h2>
+
+  <!-- Formularz wyszukiwania użytkownika po nazwie -->
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="mb-4">
+    <div class="form-group">
+      <label for="userName">Nazwa użytkownika</label>
+      <input
+        type="text"
+        id="userName"
+        formControlName="userName"
+        class="form-control"
+        placeholder="Wprowadź nazwę użytkownika"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Szukaj</button>
+  </form>
+
+  <!-- Sprawdzanie, czy wystąpił błąd -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Sprawdzanie, czy dane są dostępne -->
+  <div *ngIf="userDetails">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Token</th>
+          <th>Data Wygaśnięcia</th>
+          <th>Nazwa Użytkownika</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Rola</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ userDetails.id }}</td>
+          <td>{{ userDetails.token }}</td>
+          <td>{{ userDetails.expirationDate }}</td>
+          <td>{{ userDetails.userName }}</td>
+          <td>{{ userDetails.email }}</td>
+          <td>{{ userDetails.password }}</td>
+          <td>{{ userDetails.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Wyświetlanie komunikatu, jeśli brak danych -->
+  <div *ngIf="!userDetails && !errorMessage" class="alert alert-info">
+    Brak danych do wyświetlenia.
+  </div>
+</div>

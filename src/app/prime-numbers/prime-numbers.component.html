@@ -1,0 +1,33 @@
+<div class="centered-div">
+  <h2>Wykrywanie liczb pierwszych</h2>
+  <form (ngSubmit)="findPrimes()">
+    <div>
+      <label for="start">Początek zakresu:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="start"
+        [(ngModel)]="start"
+        name="start"
+        required
+      />
+    </div>
+    <div>
+      <label for="end">Koniec zakresu:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="end"
+        [(ngModel)]="end"
+        name="end"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-danger">Znajdź liczby pierwsze</button>
+  </form>
+
+  <div *ngIf="primes.length > 0">
+    <h3>Liczby pierwsze w zakresie:</h3>
+    <p>{{ primes.join(", ") }}</p>
+  </div>
+</div>

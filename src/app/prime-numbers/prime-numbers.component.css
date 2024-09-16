@@ -1,0 +1,22 @@
+div {
+    margin: 10px 0;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  .centered-div {
+    width: 25%;               /* Ustawienie szerokości div na 25% */
+    margin: 0 auto;            /* Wysrodkowanie div w poziomie */
+    padding: 20px;             /* Wewnętrzne wypełnienie */
+    background-color: #f0f0f0; /* Kolor tła */
+    text-align: center;        /* Wyrównanie tekstu */
+    
+    border-radius: 15px;       /* Zaokrąglone rogi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień wokół ramki */
+  }
+  
