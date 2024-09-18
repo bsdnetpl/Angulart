@@ -10,6 +10,7 @@ import { RegisterComponent } from "./register/register.component";
 import { HttpClientModule } from '@angular/common/http';
 import { ChangePasswordComponent } from "./change-password/change-password.component";
 import { DeleteUserComponent } from "./delete-user/delete-user.component";
+import { GetAllUsersComponent } from "./get-all-users/get-all-users.component";
 
 
 @Component({
@@ -18,7 +19,7 @@ import { DeleteUserComponent } from "./delete-user/delete-user.component";
   imports: [RouterOutlet, Input1Component,
     Input2Component,
     SumButtonComponent, PrimeNumbersComponent,
-    HttpClientModule, LoginComponent, UserDetailsComponent, RegisterComponent, ChangePasswordComponent, DeleteUserComponent],
+    HttpClientModule, LoginComponent, UserDetailsComponent, RegisterComponent, ChangePasswordComponent, DeleteUserComponent, GetAllUsersComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

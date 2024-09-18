@@ -3,20 +3,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms'; 
-import { HttpClientModule } from '@angular/common/http';  // Dodaj ten import
+import { HttpClient } from '@angular/common/http';  // Dodaj ten import
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule],
 })
 export class RegisterComponent {
   registerForm: FormGroup;
   message: string | null = null;
 
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(private fb: FormBuilder, private userService: UserService, private http: HttpClient) {
     this.registerForm = this.fb.group({
       userName: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]],
