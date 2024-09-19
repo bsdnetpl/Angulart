@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Input1Component } from './input1/input1.component';
-import { Input2Component } from './input2/input2.component';
-import { SumButtonComponent } from './sum-button/sum-button.component';
+
 import { PrimeNumbersComponent } from "./prime-numbers/prime-numbers.component";
 import { LoginComponent } from "./login/login.component";
 import { UserDetailsComponent } from "./user-detail/user-detail.component";
@@ -16,9 +14,7 @@ import { GetAllUsersComponent } from "./get-all-users/get-all-users.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Input1Component,
-    Input2Component,
-    SumButtonComponent, PrimeNumbersComponent,
+  imports: [RouterOutlet, PrimeNumbersComponent,
     HttpClientModule, LoginComponent, UserDetailsComponent, RegisterComponent, ChangePasswordComponent, DeleteUserComponent, GetAllUsersComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
